@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[O TEU NOME] — Currículo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F3;
+    --paper-dim:#F0ECE2;
+    --ink:#1C1B18;
+    --ink-soft:#5B584F;
+    --brass:#9C7A3C;
+    --brass-soft:#C9AD74;
+    --line:#DCD5C4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .layout{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    min-height:100vh;
+  }
+  /* Tabs = pastas de dossiê, navegação lateral */
+  .tabs{
+    background:var(--ink);
+    display:flex;
+    flex-direction:column;
+    position:sticky;
+    top:0;
+    height:100vh;
+  }
+  .tab{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    color:var(--paper-dim);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    text-decoration:none;
+    border-bottom:1px solid rgba(250,248,243,0.1);
+    transition:background 0.25s ease, color 0.25s ease;
+  }
+  .tab:hover, .tab.active{
+    background:var(--brass);
+    color:var(--ink);
+  }
+  main{padding:0 6vw;}
+  section{
+    max-width:760px;
+    margin:0 auto;
+    padding:64px 0;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-of-type{border-bottom:none;}
+
+  /* HERO */
+  #perfil{padding-top:88px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--brass);
+    display:block;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(1.1rem, 2.4vw, 1.5rem);
+    color:var(--ink-soft);
+    margin-top:10px;
+  }
+  .intro{
+    margin-top:28px;
+    max-width:560px;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+  .meta-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    margin-top:36px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .meta-row a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--brass-soft);}
+
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.7rem;
+    margin-bottom:34px;
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+  }
+  h2::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+  .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--brass);
+  }
+
+  /* EXPERIÊNCIA */
+  .job{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:24px;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+  }
+  .job:first-of-type{border-top:none;}
+  .job time{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    padding-top:4px;
+  }
+  .job h3{font-family:'Inter', sans-serif; font-weight:600; font-size:1.05rem;}
+  .job .company{color:var(--brass); font-weight:500; font-size:0.92rem; margin-bottom:8px;}
+  .job p{color:var(--ink-soft); font-size:0.96rem;}
+
+  /* COMPETÊNCIAS */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+    gap:14px;
+  }
+  .skill{
+    border:1px solid var(--line);
+    padding:14px 16px;
+    font-size:0.92rem;
+    background:var(--paper-dim);
+  }
+  .skill b{display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--brass); margin-bottom:4px; text-transform:uppercase; letter-spacing:0.05em;}
+
+  /* PORTFOLIO / CATÁLOGO opcional */
+  .grid-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+    gap:20px;
+  }
+  .card{
+    border:1px solid var(--line);
+    background:var(--paper-dim);
+    padding:20px;
+  }
+  .card h3{font-size:1rem; margin-bottom:6px;}
+  .card p{font-size:0.9rem; color:var(--ink-soft);}
+
+  /* CONTACTO */
+  .contact-links{display:flex; flex-direction:column; gap:10px; margin-top:20px;}
+  .contact-links a{
+    color:var(--ink);
+    text-decoration:none;
+    font-size:1rem;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+  }
+  .contact-links a:hover{color:var(--brass);}
+
+  footer{
+    text-align:center;
+    padding:30px 0 60px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--ink-soft);
+  }
+
+  @media(max-width:640px){
+    .layout{grid-template-columns:44px 1fr;}
+    .tab{font-size:9.5px;}
+    main{padding:0 6vw;}
+    .job{grid-template-columns:1fr; gap:6px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <nav class="tabs">
+    <a href="#perfil" class="tab active">Perfil</a>
+    <a href="#experiencia" class="tab">Experiência</a>
+    <a href="#competencias" class="tab">Competências</a>
+    <a href="#trabalhos" class="tab">Trabalhos</a>
+    <a href="#contacto" class="tab">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="perfil">
+      <span class="eyebrow">Currículo — 2026</span>
+      <h1>[O TEU NOME]</h1>
+      <p class="role">[a tua profissão ou área — ex: "Designer de Produto"]</p>
+      <p class="intro">
+        [Escreve aqui 2-3 frases sobre ti: quem és, o que fazes, e que tipo de trabalho procuras.
+        Fala em primeira pessoa e sê direto — isto é a primeira coisa que um recrutador lê.]
+      </p>
+      <div class="meta-row">
+        <span>📍 [Cidade, País]</span>
+        <a href="mailto:oteu@email.com">oteu@email.com</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <h2><span class="idx">01</span> Experiência</h2>
+
+      <div class="job">
+        <time>2023 — atual</time>
+        <div>
+          <h3>[Cargo]</h3>
+          <div class="company">[Nome da empresa]</div>
+          <p>[Uma ou duas frases sobre o que fizeste e o impacto que tiveste.]</p>
+        </div>
+      </div>
+
+      <div class="job">
+        <time>2021 — 2023</time>
+        <div>
+          <h3>[Cargo anterior]</h3>
+          <div class="company">[Nome da empresa]</div>
+          <p>[Uma ou duas frases sobre esta experiência.]</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias">
+      <h2><span class="idx">02</span> Competências</h2>
+      <div class="skills-grid">
+        <div class="skill"><b>Técnicas</b>[Ex: Figma, Excel, Python]</div>
+        <div class="skill"><b>Idiomas</b>[Ex: Português, Inglês]</div>
+        <div class="skill"><b>Ferramentas</b>[Ex: Notion, Adobe CC]</div>
+        <div class="skill"><b>Outras</b>[O que fizer sentido]</div>
+      </div>
+    </section>
+
+    <section id="trabalhos">
+      <h2><span class="idx">03</span> Trabalhos / Portfolio</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <h3>[Nome do projeto]</h3>
+          <p>[Breve descrição do que é e o teu papel nele.]</p>
+        </div>
+        <div class="card">
+          <h3>[Nome do projeto]</h3>
+          <p>[Breve descrição.]</p>
+        </div>
+        <div class="card">
+          <h3>[Nome do projeto]</h3>
+          <p>[Breve descrição.]</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2><span class="idx">04</span> Contacto</h2>
+      <p style="color:var(--ink-soft)">Disponível para novos projetos e oportunidades.</p>
+      <div class="contact-links">
+        <a href="mailto:oteu@email.com">Email <span>→</span></a>
+        <a href="#">LinkedIn <span>→</span></a>
+        <a href="#">GitHub <span>→</span></a>
+        <a href="#">Instagram / Behance <span>→</span></a>
+      </div>
+    </section>
+
+    <footer>© 2026 [O teu nome]. Feito à mão.</footer>
+  </main>
+</div>
+
+<script>
+  // Marca o tab ativo consoante a secção visível
+  const tabs = document.querySelectorAll('.tab');
+  const sections = document.querySelectorAll('main section[id]');
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        tabs.forEach(t=>t.classList.remove('active'));
+        const active = document.querySelector(`.tab[href="#${entry.target.id}"]`);
+        if(active) active.classList.add('active');
+      }
+    });
+  }, {rootMargin:"-40% 0px -50% 0px"});
+  sections.forEach(s=>observer.observe(s));
+</script>
+
+</body>
+</html>
