@@ -111,6 +111,29 @@
   }
   .meta-row a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--brass-soft);}
 
+  /* HERO com foto */
+  .hero-top{
+    display:flex;
+    align-items:flex-end;
+    gap:32px;
+    flex-wrap:wrap;
+  }
+  .headshot{
+    width:132px;
+    height:132px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid var(--paper);
+    outline:1px solid var(--line);
+    box-shadow:0 10px 24px rgba(28,27,24,0.12);
+    flex-shrink:0;
+  }
+  .hero-text{min-width:0;}
+  @media(max-width:520px){
+    .hero-top{flex-direction:column; align-items:flex-start; gap:20px;}
+    .headshot{width:108px; height:108px;}
+  }
+
   h2{
     font-family:'Fraunces', serif;
     font-weight:600;
@@ -216,27 +239,37 @@
 
 <div class="layout">
   <nav class="tabs">
-    <a href="#perfil" class="tab active">Perfil</a>
-    <a href="#experiencia" class="tab">Experiência</a>
-    <a href="#competencias" class="tab">Competências</a>
-    <a href="#trabalhos" class="tab">Trabalhos</a>
-    <a href="#contacto" class="tab">Contacto</a>
+    <a href="#perfil" class="tab active">PERFIL</a>
+    <a href="#experiencia" class="tab">EXPERIÊNCIA</a>
+    <a href="#competencias" class="tab">STACK TECNOLÓGICO</a>
+    <a href="#trabalhos" class="tab">COMPETENCIAS</a>
+    <a href="#contacto" class="tab">CONTACTO</a>
   </nav>
 
   <main>
     <section id="perfil">
       <span class="eyebrow">Currículo — 2026</span>
-      <h1>[O TEU NOME]</h1>
-      <p class="role">[a tua profissão ou área — ex: "Designer de Produto"]</p>
+      <div class="hero-top">
+        <img src="foto.jpg" alt="José Leite" class="headshot">
+        <div class="hero-text">
+          <h1>JOSÉ LEITE</h1>
+          <p class="role">SENIOR FULL STACK MARKETER & AI AUTOMATION ARCHITECT</p>
+        </div>
+      </div>
       <p class="intro">
-        [Escreve aqui 2-3 frases sobre ti: quem és, o que fazes, e que tipo de trabalho procuras.
-        Fala em primeira pessoa e sê direto — isto é a primeira coisa que um recrutador lê.]
+        Estratega de Crecimiento con más de 15 años de trayectoria escalando
+ecosistemas digitales complejos a escala global. Especializado en la
+convergencia estratégica entre IA Generativa, Automatización (n8n) y SEO/
+GEO. Experto en transformar departamentos de marketing tradicionales en
+motores de eficiencia técnica, logrando crecimientos sostenidos en tráfico
+orgánico, optimización de la tasa de conversión (CRO) y máxima rentabilidad
+(ROI/LTV) en sectores como LogiTech, Retail, EdTech y Media.
       </p>
       <div class="meta-row">
-        <span>📍 [Cidade, País]</span>
-        <a href="mailto:oteu@email.com">oteu@email.com</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
+        <span>📍 Barcelona, España</span>
+        <a href="mailto:j.m.leite@email.com">j.m.leite@email.com</a>
+        <a href="https://www.linkedin.com/in/jose-leite-seo/">LinkedIn</a>
+        <a href="https://github.com/joseleie">GitHub</a>
       </div>
     </section>
 
@@ -244,48 +277,140 @@
       <h2><span class="idx">01</span> Experiência</h2>
 
       <div class="job">
-        <time>2023 — atual</time>
+        <time>Marzo 2025 – Presente</time>
         <div>
-          <h3>[Cargo]</h3>
-          <div class="company">[Nome da empresa]</div>
-          <p>[Uma ou duas frases sobre o que fizeste e o impacto que tiveste.]</p>
+          <h3>Chief Marketing Officer (CMO)</h3>
+          <div class="company">EnvioxEnvio</div>
+          <p>Desde marzo de 2025, lidero la estrategia global de adquisición y digitalización de la cadena de suministro mediante marketing de alto rendimiento. Diseño flujos en n8n e IA para integrar CRM, ERP y operaciones, logrando cualificar leads en tiempo real, automatizar la comunicación a escala y reducir un 40% el tiempo operativo. Gracias a la optimización continua del embudo y del Customer Journey, impulsé un crecimiento del 300% en la base de usuarios, reduciendo al mismo tiempo el CAC y maximizando el LTV.</p>
         </div>
       </div>
 
       <div class="job">
-        <time>2021 — 2023</time>
+        <time>Marzo 2024 – Noviembre 2024</time>
         <div>
-          <h3>[Cargo anterior]</h3>
-          <div class="company">[Nome da empresa]</div>
-          <p>[Uma ou duas frases sobre esta experiência.]</p>
+          <h3>Head of SEO & Organic Growth</h3>
+          <div class="company"> Kleding / Fashiola
+</div>
+          <p>Dirigí la estrategia de SEO internacional a gran escala para 23 países y 12 idiomas, gestionando e-commerces con catálogos masivos de millones de SKUs. Lideré la transición hacia GEO y SGE, optimizando la visibilidad en motores generativos como Gemini, Perplexity y ChatGPT Search para aumentar la autoridad de entidad y la cuota de respuesta. Además, escalé la producción de contenido semántico con flujos automatizados bajo estándares E-E-A-T y ejecuté la optimización técnica del rendimiento en Google Merchant Center.</p>
+        </div>
+      </div>
+      <div class="job">
+        <time>Marzo 2020 – Febrero 2024</time>
+        <div>
+          <h3>Senior Digital Consultant</h3>
+          <div class="company"> Elabs Consulting
+</div>
+          <p>Gestioné proyectos de SEO de alto rendimiento para clientes de media, travel, e-commerce de gran volumen (>1M de URLs), plataformas SaaS y marcas de moda (fashion), optimizando la arquitectura web, el Crawl Budget y las Core Web Vitals, además de maximizar el tráfico en Google Discover y News. Ofrecí consultoría transversal 360° integrando SEO con Paid Media (SEM/Social Ads) y automatizaciones de CRM y Email Marketing para maximizar el ROI. Asimismo, colaboré directamente con equipos de producto y desarrollo mediante metodologías Agile (Scrum/Kanban) en Jira.</p>
+        </div>
+      </div>
+      <div class="job">
+        <time>Febrero 2017 – Febrero 2020</time>
+        <div>
+          <h3>International Acquisition Manager</h3>
+          <div class="company"> Camaloon
+</div>
+          <p>Lideré el equipo de adquisición administrando presupuestos de 7 cifras en Paid Media (SEM y Social) orientados a maximizar el ROAS, reducir el CPA e impulsar una alta escalabilidad en España y EE. UU. Implementé modelos de atribución y dashboards analíticos avanzados para la supervisión holística del CAC y el LTV. Además, colaboré estrechamente con el equipo de producto en la ejecución de tests A/B y la optimización de la tasa de conversión (CRO) y experiencia de usuario (UX) adaptada a cada mercado.</p>
+        </div>
+      </div>
+      <div class="job">
+        <time>Mayo 2015 – Enero 2017</time>
+        <div>
+          <h3>Global Marketing Director / CMO</h3>
+          <div class="company"> iContainers
+</div>
+          <p>Dirigí la estrategia global de marketing digital (SEM, SEO, Inbound, Social y Mobile) en España y EE. UU. para el primer cotizador de transporte marítimo del mundo, orientando cada canal a resultados mediante el diseño estratégico de campañas y la automatización de procesos B2B/B2C.</p>
+        </div>
+      </div>
+      <div class="job">
+        <time>Mayo 2014 – Noviembre 2014</time>
+        <div>
+          <h3>Digital Marketing & Project Manager</h3>
+          <div class="company"> Grupo Planeta
+</div>
+          <p>Dirigí la captación y retención de usuarios para tres marcas del área de formación del grupo, así como la estrategia de rendimiento digital para sus sellos editoriales líderes. Para maximizar los resultados de ventas, coordiné la estrategia comercial integrando las campañas digitales con un call center enfocado en la conversión outbound.</p>
+        </div>
+      </div>
+      <div class="job">
+        <time>Niviembre 2011 – Setienbre 2014</time>
+        <div>
+          <h3>Head of Marketing</h3>
+          <div class="company"> MeQuedoUno
+</div>
+          <p>Dirigí la estrategia de marketing para un e-commerce de flash sales de alta rotación y fidelización, escalando el modelo desde 1 vertical inicial hasta 8 verticales temáticos y un supermercado online. Lideré campañas masivas de Paid Media y SEO, complementadas con una sólida estrategia de Email Marketing donde gestioné la entregabilidad técnica y la segmentación avanzada para maximizar la retención y el LTV.</p>
+        </div>
+      </div>
+
+          <div class="job">
+        <time>2008–2010</time>
+        <div>
+          <h3>Director Marketing On/Of</h3>
+          <div class="company"> Verlag Dashöfer
+</div>
+         
+        </div>
+      </div>
+       <div class="job">
+        <time>2010–2011</time>
+        <div>
+          <h3>SEO Executive</h3>
+          <div class="company"> Auto Europe UK/IE
+</div>
+         
+        </div>
+      </div>
+       <div class="job">
+        <time>2007–2009</time>
+        <div>
+          <h3>Marketing Manager</h3>
+          <div class="company"> Qmusika
+</div>
+         
         </div>
       </div>
     </section>
 
     <section id="competencias">
-      <h2><span class="idx">02</span> Competências</h2>
+      <h2><span class="idx">02</span> STACK TECNOLÓGICO</h2>
       <div class="skills-grid">
-        <div class="skill"><b>Técnicas</b>[Ex: Figma, Excel, Python]</div>
-        <div class="skill"><b>Idiomas</b>[Ex: Português, Inglês]</div>
-        <div class="skill"><b>Ferramentas</b>[Ex: Notion, Adobe CC]</div>
-        <div class="skill"><b>Outras</b>[O que fizer sentido]</div>
+        <div class="skill"><b>IA & Automatización</b>n8n (Nivel Experto), OpenAI API, Claude, Prompt Engineering, HubSpot, Salesforce, Workflows CRM.
+</div>
+        <div class="skill"><b>SEO & GEO Engine</b>SEO Técnico, GEO/SGE, SEO
+Semántico, Google Search Console, Screaming Frog, Surfer SEO, Botify, Moz
+Pro.
+</div>
+        <div class="skill"><b>SEO Suites</b>SEMrush, Ahrefs, Sistrix</div>
+        <div class="skill"><b>Analytics & Data</b>GA4, Google Tag Manager, Google Merchant Center, BigQuery, Data Studio, Lighthouse, PageSpeed Insights.</div>
+         <div class="skill"><b>Growth & Paid</b>SEM (Google Ads), Paid Social, Publicidad Programática, Email Marketing, Estrategia CRM.
+</div>
+ <div class="skill"><b>Producto & Gestión</b>Metodologías Ágiles (Scrum, Kanban), Jira, Figma, WordPress Headless, HTML/CSS.
+
+</div>
       </div>
     </section>
 
     <section id="trabalhos">
-      <h2><span class="idx">03</span> Trabalhos / Portfolio</h2>
+      <h2><span class="idx">03</span>COMPETENCIAS</h2>
       <div class="grid-cards">
         <div class="card">
-          <h3>[Nome do projeto]</h3>
-          <p>[Breve descrição do que é e o teu papel nele.]</p>
+          <h3>Liderazgo Equipo</h3>
+         
         </div>
         <div class="card">
-          <h3>[Nome do projeto]</h3>
-          <p>[Breve descrição.]</p>
+          <h3>Lead Nurturing</h3>
+         
+        </div>
+        
+        <div class="card">
+          <h3>Growth Marketing</h3>
+         
         </div>
         <div class="card">
-          <h3>[Nome do projeto]</h3>
-          <p>[Breve descrição.]</p>
+          <h3>Arquitectura n8n</h3>
+          
+        </div>
+        <div class="card">
+          <h3>CRO & Test A/B</h3>
+         
         </div>
       </div>
     </section>
@@ -294,10 +419,15 @@
       <h2><span class="idx">04</span> Contacto</h2>
       <p style="color:var(--ink-soft)">Disponível para novos projetos e oportunidades.</p>
       <div class="contact-links">
-        <a href="mailto:oteu@email.com">Email <span>→</span></a>
-        <a href="#">LinkedIn <span>→</span></a>
-        <a href="#">GitHub <span>→</span></a>
-        <a href="#">Instagram / Behance <span>→</span></a>
+        <a href="mailto:j.m.leiteu@email.com">Email <span>→</span></a>
+        <a href="https://www.linkedin.com/in/jose-leite-seo/">LinkedIn <span>→</span></a>
+        <a href="https://github.com/joseleie">GitHub <span>→</span></a>
+      
+
+
+
+
+
       </div>
     </section>
 
