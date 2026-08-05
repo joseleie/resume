@@ -1,59 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Título e descrição -->
-<title>José Leite — CMO & AI Automation Architect | Currículo</title>
-<meta name="description" content="José Leite, Chief Marketing Officer y Arquitecto de Automatización IA con 15+ años escalando growth, SEO/GEO y n8n en LogiTech, Retail, EdTech y Media. Barcelona, España.">
+<title>José Leite — Choose your language / Elige idioma / Escolha o idioma</title>
+<meta name="description" content="José Leite — CV / Currículo / Resume. Available in Spanish, Portuguese and English.">
 <meta name="robots" content="index, follow">
-<meta name="author" content="José Leite">
 <link rel="canonical" href="https://joseleite.github.io/resume/">
-
-<!-- Open Graph (Facebook, LinkedIn, etc.) -->
-<meta property="og:type" content="profile">
-<meta property="og:title" content="José Leite — CMO & AI Automation Architect">
-<meta property="og:description" content="Estratega de Crecimiento con 15+ años escalando ecosistemas digitales: IA Generativa, Automatización (n8n) y SEO/GEO en LogiTech, Retail, EdTech y Media.">
-<meta property="og:url" content="https://joseleite.github.io/resume/">
-<meta property="og:image" content="https://joseleite.github.io/resume/foto.jpg">
-<meta property="og:image:width" content="700">
-<meta property="og:image:height" content="700">
-<meta property="og:locale" content="es_ES">
-<meta property="og:site_name" content="José Leite — Currículo">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="José Leite — CMO & AI Automation Architect">
-<meta name="twitter:description" content="Estratega de Crecimiento: IA Generativa, Automatización (n8n) y SEO/GEO. 15+ años en LogiTech, Retail, EdTech y Media.">
-<meta name="twitter:image" content="https://joseleite.github.io/resume/foto.jpg">
-
-<!-- Dados estruturados (Google rich results) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "José Leite",
-  "jobTitle": "Chief Marketing Officer & AI Automation Architect",
-  "url": "https://joseleite.github.io/resume/",
-  "image": "https://joseleite.github.io/resume/foto.jpg",
-  "email": "mailto:j.m.leite@email.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Barcelona",
-    "addressCountry": "ES"
-  },
-  "worksFor": {
-    "@type": "Organization",
-    "name": "EnvioxEnvio"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/in/jose-leite-seo/",
-    "https://github.com/joseleite"
-  ]
-}
-</script>
-
+<link rel="alternate" hreflang="es" href="https://joseleite.github.io/resume/es.html">
+<link rel="alternate" hreflang="pt-pt" href="https://joseleite.github.io/resume/pt.html">
+<link rel="alternate" hreflang="en-gb" href="https://joseleite.github.io/resume/en.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -67,437 +23,112 @@
     --line:#DCD5C4;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
   body{
     background:var(--paper);
     color:var(--ink);
     font-family:'Inter', sans-serif;
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  .layout{
-    display:grid;
-    grid-template-columns:64px 1fr;
     min-height:100vh;
-  }
-  /* Tabs = pastas de dossiê, navegação lateral */
-  .tabs{
-    background:var(--ink);
     display:flex;
     flex-direction:column;
-    position:sticky;
-    top:0;
-    height:100vh;
-  }
-  .tab{
-    flex:1;
-    display:flex;
     align-items:center;
     justify-content:center;
-    writing-mode:vertical-rl;
-    text-orientation:mixed;
-    color:var(--paper-dim);
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.15em;
-    text-transform:uppercase;
-    text-decoration:none;
-    border-bottom:1px solid rgba(250,248,243,0.1);
-    transition:background 0.25s ease, color 0.25s ease;
+    text-align:center;
+    padding:24px;
+    -webkit-font-smoothing:antialiased;
   }
-  .tab:hover, .tab.active{
-    background:var(--brass);
-    color:var(--ink);
+  .headshot{
+    width:112px;
+    height:112px;
+    border-radius:50%;
+    object-fit:cover;
+    outline:1px solid var(--line);
+    box-shadow:0 10px 24px rgba(28,27,24,0.12);
+    margin-bottom:28px;
   }
-  main{padding:0 6vw;}
-  section{
-    max-width:760px;
-    margin:0 auto;
-    padding:64px 0;
-    border-bottom:1px solid var(--line);
-  }
-  section:last-of-type{border-bottom:none;}
-
-  /* HERO */
-  #perfil{padding-top:88px;}
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.12em;
+    font-size:11px;
+    letter-spacing:0.14em;
     text-transform:uppercase;
     color:var(--brass);
-    display:block;
-    margin-bottom:18px;
+    margin-bottom:16px;
   }
   h1{
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:clamp(2.4rem, 6vw, 4.2rem);
-    line-height:1.02;
+    font-size:clamp(2rem, 6vw, 3.2rem);
     letter-spacing:-0.01em;
+    margin-bottom:44px;
   }
-  .role{
-    font-family:'Fraunces', serif;
-    font-style:italic;
-    font-weight:400;
-    font-size:clamp(1.1rem, 2.4vw, 1.5rem);
-    color:var(--ink-soft);
-    margin-top:10px;
-  }
-  .intro{
-    margin-top:28px;
-    max-width:560px;
-    font-size:1.05rem;
-    color:var(--ink-soft);
-  }
-  .meta-row{
+  .langs{
     display:flex;
-    gap:28px;
+    gap:16px;
     flex-wrap:wrap;
-    margin-top:36px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    color:var(--ink-soft);
+    justify-content:center;
   }
-  .meta-row a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--brass-soft);}
-
-  /* HERO com foto */
-  .hero-top{
+  .langs a{
     display:flex;
-    align-items:flex-end;
-    gap:32px;
-    flex-wrap:wrap;
-  }
-  .headshot{
-    width:132px;
-    height:132px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid var(--paper);
-    outline:1px solid var(--line);
-    box-shadow:0 10px 24px rgba(28,27,24,0.12);
-    flex-shrink:0;
-  }
-  .hero-text{min-width:0;}
-  @media(max-width:520px){
-    .hero-top{flex-direction:column; align-items:flex-start; gap:20px;}
-    .headshot{width:108px; height:108px;}
-  }
-
-  h2{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size:1.7rem;
-    margin-bottom:34px;
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-  }
-  h2::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--line);
-  }
-  .idx{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--brass);
-  }
-
-  /* EXPERIÊNCIA */
-  .job{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:24px;
-    padding:22px 0;
-    border-top:1px solid var(--line);
-  }
-  .job:first-of-type{border-top:none;}
-  .job time{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    padding-top:4px;
-  }
-  .job h3{font-family:'Inter', sans-serif; font-weight:600; font-size:1.05rem;}
-  .job .company{color:var(--brass); font-weight:500; font-size:0.92rem; margin-bottom:8px;}
-  .job p{color:var(--ink-soft); font-size:0.96rem;}
-
-  /* COMPETÊNCIAS */
-  .skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
-    gap:14px;
-  }
-  .skill{
-    border:1px solid var(--line);
-    padding:14px 16px;
-    font-size:0.92rem;
-    background:var(--paper-dim);
-  }
-  .skill b{display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--brass); margin-bottom:4px; text-transform:uppercase; letter-spacing:0.05em;}
-
-  /* PORTFOLIO / CATÁLOGO opcional */
-  .grid-cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
-    gap:20px;
-  }
-  .card{
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    width:150px;
+    padding:26px 18px;
     border:1px solid var(--line);
     background:var(--paper-dim);
-    padding:20px;
-  }
-  .card h3{font-size:1rem; margin-bottom:6px;}
-  .card p{font-size:0.9rem; color:var(--ink-soft);}
-
-  /* CONTACTO */
-  .contact-links{display:flex; flex-direction:column; gap:10px; margin-top:20px;}
-  .contact-links a{
     color:var(--ink);
     text-decoration:none;
-    font-size:1rem;
-    padding:10px 0;
-    border-bottom:1px solid var(--line);
-    display:flex;
-    justify-content:space-between;
+    transition:background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
   }
-  .contact-links a:hover{color:var(--brass);}
-
+  .langs a:hover{
+    background:var(--brass);
+    border-color:var(--brass);
+    transform:translateY(-2px);
+  }
+  .lang-code{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.6rem;
+  }
+  .lang-name{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .langs a:hover .lang-name{color:var(--ink);}
   footer{
-    text-align:center;
-    padding:30px 0 60px;
+    margin-top:52px;
     font-family:'IBM Plex Mono', monospace;
     font-size:11px;
     color:var(--ink-soft);
   }
-
-  @media(max-width:640px){
-    .layout{grid-template-columns:44px 1fr;}
-    .tab{font-size:9.5px;}
-    main{padding:0 6vw;}
-    .job{grid-template-columns:1fr; gap:6px;}
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
+  @media(max-width:520px){
+    .langs{flex-direction:column; align-items:center;}
+    .langs a{width:220px;}
   }
 </style>
 </head>
 <body>
+  <img src="foto.jpg" alt="José Leite" class="headshot">
+  <span class="eyebrow">CV — Currículo — Resume</span>
+  <h1>JOSÉ LEITE</h1>
 
-<div class="layout">
-  <nav class="tabs">
-    <a href="#perfil" class="tab active">PERFIL</a>
-    <a href="#experiencia" class="tab">EXPERIÊNCIA</a>
-    <a href="#competencias" class="tab">STACK TECNOLÓGICO</a>
-    <a href="#trabalhos" class="tab">COMPETENCIAS</a>
-    <a href="#contacto" class="tab">CONTACTO</a>
+  <nav class="langs">
+    <a href="es.html">
+      <span class="lang-code">ES</span>
+      <span class="lang-name">Castellano</span>
+    </a>
+    <a href="pt.html">
+      <span class="lang-code">PT</span>
+      <span class="lang-name">Português</span>
+    </a>
+    <a href="en.html">
+      <span class="lang-code">EN</span>
+      <span class="lang-name">English (UK)</span>
+    </a>
   </nav>
 
-  <main>
-    <section id="perfil">
-      <span class="eyebrow">Currículo — 2026</span>
-      <div class="hero-top">
-        <img src="foto.jpg" alt="José Leite" class="headshot">
-        <div class="hero-text">
-          <h1>JOSÉ LEITE</h1>
-          <p class="role">SENIOR FULL STACK MARKETER & AI AUTOMATION ARCHITECT</p>
-        </div>
-      </div>
-      <p class="intro">
-        Estratega de Crecimiento con más de 15 años de trayectoria escalando
-ecosistemas digitales complejos a escala global. Especializado en la
-convergencia estratégica entre IA Generativa, Automatización (n8n) y SEO/
-GEO. Experto en transformar departamentos de marketing tradicionales en
-motores de eficiencia técnica, logrando crecimientos sostenidos en tráfico
-orgánico, optimización de la tasa de conversión (CRO) y máxima rentabilidad
-(ROI/LTV) en sectores como LogiTech, Retail, EdTech y Media.
-      </p>
-      <div class="meta-row">
-        <span>📍 Barcelona, España</span>
-        <a href="mailto:j.m.leite@email.com">j.m.leite@email.com</a>
-        <a href="https://www.linkedin.com/in/jose-leite-seo/">LinkedIn</a>
-        <a href="https://github.com/joseleie">GitHub</a>
-      </div>
-    </section>
-
-    <section id="experiencia">
-      <h2><span class="idx">01</span> Experiência</h2>
-
-      <div class="job">
-        <time>Marzo 2025 – Presente</time>
-        <div>
-          <h3>Chief Marketing Officer (CMO)</h3>
-          <div class="company">EnvioxEnvio</div>
-          <p>Desde marzo de 2025, lidero la estrategia global de adquisición y digitalización de la cadena de suministro mediante marketing de alto rendimiento. Diseño flujos en n8n e IA para integrar CRM, ERP y operaciones, logrando cualificar leads en tiempo real, automatizar la comunicación a escala y reducir un 40% el tiempo operativo. Gracias a la optimización continua del embudo y del Customer Journey, impulsé un crecimiento del 300% en la base de usuarios, reduciendo al mismo tiempo el CAC y maximizando el LTV.</p>
-        </div>
-      </div>
-
-      <div class="job">
-        <time>Marzo 2024 – Noviembre 2024</time>
-        <div>
-          <h3>Head of SEO & Organic Growth</h3>
-          <div class="company"> Kleding / Fashiola
-</div>
-          <p>Dirigí la estrategia de SEO internacional a gran escala para 23 países y 12 idiomas, gestionando e-commerces con catálogos masivos de millones de SKUs. Lideré la transición hacia GEO y SGE, optimizando la visibilidad en motores generativos como Gemini, Perplexity y ChatGPT Search para aumentar la autoridad de entidad y la cuota de respuesta. Además, escalé la producción de contenido semántico con flujos automatizados bajo estándares E-E-A-T y ejecuté la optimización técnica del rendimiento en Google Merchant Center.</p>
-        </div>
-      </div>
-      <div class="job">
-        <time>Marzo 2020 – Febrero 2024</time>
-        <div>
-          <h3>Senior Digital Consultant</h3>
-          <div class="company"> Elabs Consulting
-</div>
-          <p>Gestioné proyectos de SEO de alto rendimiento para clientes de media, travel, e-commerce de gran volumen (>1M de URLs), plataformas SaaS y marcas de moda (fashion), optimizando la arquitectura web, el Crawl Budget y las Core Web Vitals, además de maximizar el tráfico en Google Discover y News. Ofrecí consultoría transversal 360° integrando SEO con Paid Media (SEM/Social Ads) y automatizaciones de CRM y Email Marketing para maximizar el ROI. Asimismo, colaboré directamente con equipos de producto y desarrollo mediante metodologías Agile (Scrum/Kanban) en Jira.</p>
-        </div>
-      </div>
-      <div class="job">
-        <time>Febrero 2017 – Febrero 2020</time>
-        <div>
-          <h3>International Acquisition Manager</h3>
-          <div class="company"> Camaloon
-</div>
-          <p>Lideré el equipo de adquisición administrando presupuestos de 7 cifras en Paid Media (SEM y Social) orientados a maximizar el ROAS, reducir el CPA e impulsar una alta escalabilidad en España y EE. UU. Implementé modelos de atribución y dashboards analíticos avanzados para la supervisión holística del CAC y el LTV. Además, colaboré estrechamente con el equipo de producto en la ejecución de tests A/B y la optimización de la tasa de conversión (CRO) y experiencia de usuario (UX) adaptada a cada mercado.</p>
-        </div>
-      </div>
-      <div class="job">
-        <time>Mayo 2015 – Enero 2017</time>
-        <div>
-          <h3>Global Marketing Director / CMO</h3>
-          <div class="company"> iContainers
-</div>
-          <p>Dirigí la estrategia global de marketing digital (SEM, SEO, Inbound, Social y Mobile) en España y EE. UU. para el primer cotizador de transporte marítimo del mundo, orientando cada canal a resultados mediante el diseño estratégico de campañas y la automatización de procesos B2B/B2C.</p>
-        </div>
-      </div>
-      <div class="job">
-        <time>Mayo 2014 – Noviembre 2014</time>
-        <div>
-          <h3>Digital Marketing & Project Manager</h3>
-          <div class="company"> Grupo Planeta
-</div>
-          <p>Dirigí la captación y retención de usuarios para tres marcas del área de formación del grupo, así como la estrategia de rendimiento digital para sus sellos editoriales líderes. Para maximizar los resultados de ventas, coordiné la estrategia comercial integrando las campañas digitales con un call center enfocado en la conversión outbound.</p>
-        </div>
-      </div>
-      <div class="job">
-        <time>Niviembre 2011 – Setienbre 2014</time>
-        <div>
-          <h3>Head of Marketing</h3>
-          <div class="company"> MeQuedoUno
-</div>
-          <p>Dirigí la estrategia de marketing para un e-commerce de flash sales de alta rotación y fidelización, escalando el modelo desde 1 vertical inicial hasta 8 verticales temáticos y un supermercado online. Lideré campañas masivas de Paid Media y SEO, complementadas con una sólida estrategia de Email Marketing donde gestioné la entregabilidad técnica y la segmentación avanzada para maximizar la retención y el LTV.</p>
-        </div>
-      </div>
-
-          <div class="job">
-        <time>2008–2010</time>
-        <div>
-          <h3>Director Marketing On/Of</h3>
-          <div class="company"> Verlag Dashöfer
-</div>
-         
-        </div>
-      </div>
-       <div class="job">
-        <time>2010–2011</time>
-        <div>
-          <h3>SEO Executive</h3>
-          <div class="company"> Auto Europe UK/IE
-</div>
-         
-        </div>
-      </div>
-       <div class="job">
-        <time>2007–2009</time>
-        <div>
-          <h3>Marketing Manager</h3>
-          <div class="company"> Qmusika
-</div>
-         
-        </div>
-      </div>
-    </section>
-
-    <section id="competencias">
-      <h2><span class="idx">02</span> STACK TECNOLÓGICO</h2>
-      <div class="skills-grid">
-        <div class="skill"><b>IA & Automatización</b>n8n (Nivel Experto), OpenAI API, Claude, Prompt Engineering, HubSpot, Salesforce, Workflows CRM.
-</div>
-        <div class="skill"><b>SEO & GEO Engine</b>SEO Técnico, GEO/SGE, SEO
-Semántico, Google Search Console, Screaming Frog, Surfer SEO, Botify, Moz
-Pro.
-</div>
-        <div class="skill"><b>SEO Suites</b>SEMrush, Ahrefs, Sistrix</div>
-        <div class="skill"><b>Analytics & Data</b>GA4, Google Tag Manager, Google Merchant Center, BigQuery, Data Studio, Lighthouse, PageSpeed Insights.</div>
-         <div class="skill"><b>Growth & Paid</b>SEM (Google Ads), Paid Social, Publicidad Programática, Email Marketing, Estrategia CRM.
-</div>
- <div class="skill"><b>Producto & Gestión</b>Metodologías Ágiles (Scrum, Kanban), Jira, Figma, WordPress Headless, HTML/CSS.
-
-</div>
-      </div>
-    </section>
-
-    <section id="trabalhos">
-      <h2><span class="idx">03</span>COMPETENCIAS</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <h3>Liderazgo Equipo</h3>
-         
-        </div>
-        <div class="card">
-          <h3>Lead Nurturing</h3>
-         
-        </div>
-        
-        <div class="card">
-          <h3>Growth Marketing</h3>
-         
-        </div>
-        <div class="card">
-          <h3>Arquitectura n8n</h3>
-          
-        </div>
-        <div class="card">
-          <h3>CRO & Test A/B</h3>
-         
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
-      <h2><span class="idx">04</span> Contacto</h2>
-      <div class="contact-links">
-        <a href="mailto:j.m.leiteu@email.com">Email <span>→</span></a>
-        <a href="https://www.linkedin.com/in/jose-leite-seo/">LinkedIn <span>→</span></a>
-        <a href="https://github.com/joseleie">GitHub <span>→</span></a>
-      
-
-
-
-
-
-      </div>
-    </section>
-
-  </main>
-</div>
-
-<script>
-  // Marca o tab ativo consoante a secção visível
-  const tabs = document.querySelectorAll('.tab');
-  const sections = document.querySelectorAll('main section[id]');
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        tabs.forEach(t=>t.classList.remove('active'));
-        const active = document.querySelector(`.tab[href="#${entry.target.id}"]`);
-        if(active) active.classList.add('active');
-      }
-    });
-  }, {rootMargin:"-40% 0px -50% 0px"});
-  sections.forEach(s=>observer.observe(s));
-</script>
-
+  <footer>Barcelona, España / Espanha / Spain</footer>
 </body>
 </html>
