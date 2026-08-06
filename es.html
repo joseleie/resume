@@ -60,8 +60,11 @@
 }
 </script>
 
+<link rel="preload" as="image" href="https://joseleie.github.io/resume/foto.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
     --paper:#FAF8F3;
@@ -86,7 +89,6 @@
     grid-template-columns:64px 1fr;
     min-height:100vh;
   }
-  /* Tabs = pastas de dossiê, navegação lateral */
   .tabs{
     background:var(--ink);
     display:flex;
@@ -123,8 +125,6 @@
     border-bottom:1px solid var(--line);
   }
   section:last-of-type{border-bottom:none;}
-
-  /* HERO */
   #perfil{padding-top:88px;}
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
@@ -166,8 +166,6 @@
     color:var(--ink-soft);
   }
   .meta-row a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--brass-soft);}
-
-  /* HERO com foto */
   .hero-top{
     display:flex;
     align-items:flex-end;
@@ -189,7 +187,6 @@
     .hero-top{flex-direction:column; align-items:flex-start; gap:20px;}
     .headshot{width:108px; height:108px;}
   }
-
   h2{
     font-family:'Fraunces', serif;
     font-weight:600;
@@ -210,8 +207,6 @@
     font-size:12px;
     color:var(--brass);
   }
-
-  /* EXPERIÊNCIA */
   .job{
     display:grid;
     grid-template-columns:120px 1fr;
@@ -229,8 +224,6 @@
   .job h3{font-family:'Inter', sans-serif; font-weight:600; font-size:1.05rem;}
   .job .company{color:var(--brass); font-weight:500; font-size:0.92rem; margin-bottom:8px;}
   .job p{color:var(--ink-soft); font-size:0.96rem;}
-
-  /* COMPETÊNCIAS */
   .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
@@ -243,8 +236,6 @@
     background:var(--paper-dim);
   }
   .skill b{display:block; font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--brass); margin-bottom:4px; text-transform:uppercase; letter-spacing:0.05em;}
-
-  /* PORTFOLIO / CATÁLOGO opcional */
   .grid-cards{
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
@@ -257,8 +248,6 @@
   }
   .card h3{font-size:1rem; margin-bottom:6px;}
   .card p{font-size:0.9rem; color:var(--ink-soft);}
-
-  /* CONTACTO */
   .contact-links{display:flex; flex-direction:column; gap:10px; margin-top:20px;}
   .contact-links a{
     color:var(--ink);
@@ -270,7 +259,6 @@
     justify-content:space-between;
   }
   .contact-links a:hover{color:var(--brass);}
-
   footer{
     text-align:center;
     padding:30px 0 60px;
@@ -278,18 +266,16 @@
     font-size:11px;
     color:var(--ink-soft);
   }
-
   @media(max-width:640px){
     .layout{grid-template-columns:44px 1fr;}
     .tab{font-size:9.5px;}
     main{padding:0 6vw;}
     .job{grid-template-columns:1fr; gap:6px;}
   }
-
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
   }
-
+</style>
 <style>
   .langswitch{
     position:fixed;
@@ -336,6 +322,43 @@
     transition:background 0.2s ease, color 0.2s ease;
   }
   .pdf-btn:hover{background:var(--brass); color:var(--paper);}
+
+  .sub-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:26px 0 14px;
+  }
+  .sub-label:first-of-type{margin-top:0;}
+  .edu-list{display:flex; flex-direction:column;}
+  .edu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .edu-item:first-child{border-top:none; padding-top:0;}
+  .edu-item h3{font-family:'Inter', sans-serif; font-weight:600; font-size:0.98rem;}
+  .edu-item .inst{color:var(--brass); font-size:0.88rem; margin-top:2px;}
+  .edu-item time{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .cert-list{display:flex; flex-wrap:wrap; gap:10px;}
+  .cert-chip{
+    border:1px solid var(--line);
+    background:var(--paper-dim);
+    padding:9px 14px;
+    font-size:0.88rem;
+    color:var(--ink);
+  }
 </style>
 
 </head>
@@ -347,6 +370,7 @@
     <a href="#experiencia" class="tab">EXPERIENCIA</a>
     <a href="#competencias" class="tab">STACK TECNOLÓGICO</a>
     <a href="#trabalhos" class="tab">COMPETENCIAS</a>
+    <a href="#formacion" class="tab">FORMACIÓN</a>
     <a href="#contacto" class="tab">CONTACTO</a>
   </nav>
 
@@ -354,7 +378,7 @@
     <section id="perfil">
       <span class="eyebrow">Currículo — 2026</span>
       <div class="hero-top">
-        <img src="foto.jpg" alt="José Leite" class="headshot">
+        <img src="foto.jpg" alt="José Leite" class="headshot" width="700" height="700" fetchpriority="high" loading="eager" decoding="async">
         <div class="hero-text">
           <h1>JOSÉ LEITE</h1>
           <p class="role">Marketer Senior Full Stack & Arquitecto de Automatización IA</p>
@@ -478,8 +502,35 @@
       </div>
     </section>
 
+    <section id="formacion">
+      <h2><span class="idx">04</span> Formación</h2>
+      <p class="sub-label">Formación académica</p>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div>
+            <h3>Ingeniería Informática</h3>
+            <div class="inst">Universidad de Coimbra</div>
+          </div>
+          <time>2002</time>
+        </div>
+        <div class="edu-item">
+          <div>
+            <h3>Postgrado en Marketing</h3>
+            <div class="inst">IPAM (Marketing School for Business)</div>
+          </div>
+          
+        </div>
+      </div>
+      <p class="sub-label">Certificaciones</p>
+      <div class="cert-list">
+        <div class="cert-chip">Google Analytics 4 (GA4)</div>
+        <div class="cert-chip">HubSpot Inbound Expert</div>
+        <div class="cert-chip">SAS Marketing Automation</div>
+      </div>
+    </section>
+
     <section id="contacto">
-      <h2><span class="idx">04</span> Contacto</h2>
+      <h2><span class="idx">05</span> Contacto</h2>
       <div class="contact-links">
         <a href="mailto:j.m.leite@email.com">Contacto <span>&#8594;</span></a>
         <a href="https://www.linkedin.com/in/jose-leite-seo/">LinkedIn <span>&#8594;</span></a>
