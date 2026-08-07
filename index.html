@@ -31,8 +31,12 @@
 <meta name="twitter:description" content="Chief Marketing Officer & AI Automation Architect. Elige idioma / Escolhe o idioma / Choose your language.">
 <meta name="twitter:image" content="https://joseleie.github.io/resume/foto.jpg">
 
+<link rel="preload" as="image" href="foto.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+
 <style>
   :root{
     --paper:#FAF8F3;
@@ -44,18 +48,28 @@
     --line:#DCD5C4;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
   body{
     background:var(--paper);
     color:var(--ink);
     font-family:'Inter', sans-serif;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:24px;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
+  }
+  main{padding:0 6vw;}
+  section{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 0;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-of-type{border-bottom:none;}
+
+  header{
+    max-width:760px;
+    margin:0 auto;
+    padding:72px 6vw 0;
+    text-align:center;
   }
   .headshot{
     width:112px;
@@ -64,7 +78,7 @@
     object-fit:cover;
     outline:1px solid var(--line);
     box-shadow:0 10px 24px rgba(28,27,24,0.12);
-    margin-bottom:28px;
+    margin-bottom:22px;
   }
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
@@ -72,20 +86,110 @@
     letter-spacing:0.14em;
     text-transform:uppercase;
     color:var(--brass);
-    margin-bottom:16px;
+    margin-bottom:14px;
+    display:block;
   }
   h1{
     font-family:'Fraunces', serif;
     font-weight:600;
     font-size:clamp(2rem, 6vw, 3.2rem);
     letter-spacing:-0.01em;
-    margin-bottom:44px;
   }
+  .tagline{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    margin-top:10px;
+  }
+
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.6rem;
+    text-align:center;
+    margin-bottom:8px;
+  }
+  .section-sub{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.92rem;
+    max-width:520px;
+    margin:0 auto 34px;
+  }
+
+  .media-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(230px,1fr));
+    gap:20px;
+  }
+  .media-card{
+    border:1px solid var(--line);
+    background:var(--paper-dim);
+    overflow:hidden;
+  }
+  .media-thumb{
+    aspect-ratio:16/10;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:repeating-linear-gradient(45deg, var(--paper) 0 10px, var(--paper-dim) 10px 20px);
+    border-bottom:1px dashed var(--brass-soft);
+    color:var(--brass);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    text-align:center;
+    letter-spacing:0.04em;
+    padding:12px;
+  }
+  .media-thumb img, .media-thumb iframe{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border:0;
+    display:block;
+  }
+  .media-thumb.yt-facade{
+    position:relative;
+    cursor:pointer;
+    background:var(--ink);
+    padding:0;
+  }
+  .play-btn{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:rgba(28,27,24,0.72);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    padding-left:4px;
+    transition:background 0.2s ease, transform 0.2s ease;
+  }
+  .media-thumb.yt-facade:hover .play-btn{
+    background:var(--brass);
+    transform:translate(-50%,-50%) scale(1.08);
+  }
+  .media-card .caption{
+    padding:14px 16px;
+    font-size:0.9rem;
+    color:var(--ink-soft);
+  }
+  .media-card .caption b{color:var(--ink); display:block; margin-bottom:2px; font-weight:600;}
+
+  #vlog{padding-bottom:72px;}
   .langs{
     display:flex;
     gap:16px;
     flex-wrap:wrap;
     justify-content:center;
+    margin-top:8px;
   }
   .langs a{
     display:flex;
@@ -118,38 +222,167 @@
     color:var(--ink-soft);
   }
   .langs a:hover .lang-name{color:var(--ink);}
+
   footer{
-    margin-top:52px;
+    text-align:center;
+    padding:0 0 50px;
     font-family:'IBM Plex Mono', monospace;
     font-size:11px;
     color:var(--ink-soft);
   }
+
   @media(max-width:520px){
-    .langs{flex-direction:column; align-items:center;}
+    header{padding-top:52px;}
     .langs a{width:220px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
   }
 </style>
 </head>
 <body>
-  <img src="foto.jpg" alt="José Leite" class="headshot">
-  <span class="eyebrow">CV — Currículo — Resume</span>
-  <h1>JOSÉ LEITE</h1>
 
-  <nav class="langs">
-    <a href="es.html">
-      <span class="lang-code">ES</span>
-      <span class="lang-name">Castellano</span>
-    </a>
-    <a href="pt.html">
-      <span class="lang-code">PT</span>
-      <span class="lang-name">Português</span>
-    </a>
-    <a href="en.html">
-      <span class="lang-code">EN</span>
-      <span class="lang-name">English (UK)</span>
-    </a>
-  </nav>
+  <header>
+    <img src="foto.jpg" alt="José Leite" class="headshot" width="700" height="700" fetchpriority="high" loading="eager" decoding="async">
+    <span class="eyebrow">CV — Currículo — Resume</span>
+    <h1>JOSÉ LEITE</h1>
+    <p class="tagline">CMO & AI Automation Architect</p>
+  </header>
+
+  <main>
+
+    <section id="idiomas">
+      <h2>Elige idioma</h2>
+      <p class="section-sub">Escolhe o idioma · Choose your language</p>
+      <nav class="langs">
+        <a href="es.html">
+          <span class="lang-code">ES</span>
+          <span class="lang-name">Castellano</span>
+        </a>
+        <a href="pt.html">
+          <span class="lang-code">PT</span>
+          <span class="lang-name">Português</span>
+        </a>
+        <a href="en.html">
+          <span class="lang-code">EN</span>
+          <span class="lang-name">English (UK)</span>
+        </a>
+      </nav>
+    </section>
+
+    <section id="vlog">
+      <h2>Videoblog</h2>
+      <p class="section-sub">Últimos vídeos de YouTube · Últimos vídeos do YouTube · Latest YouTube videos</p>
+      <div class="media-grid">
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="qttpO-siE5o" role="button" tabindex="0" aria-label="Reproducir: Reporting Google Discover & Google News — ENTREVISTA SEO">
+            <img src="https://i.ytimg.com/vi/qttpO-siE5o/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/qttpO-siE5o/hqdefault.jpg';"
+                 alt="Reporting Google Discover & Google News — ENTREVISTA SEO" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>Reporting Google Discover & Google News — ENTREVISTA SEO</b>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="WRnx5yCQq2M" role="button" tabindex="0" aria-label="Reproducir: Amazon Seller Central Tutorial: Qué es y Cómo funciona">
+            <img src="https://i.ytimg.com/vi/WRnx5yCQq2M/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WRnx5yCQq2M/hqdefault.jpg';"
+                 alt="Amazon Seller Central Tutorial: Qué es y Cómo funciona" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>Amazon Seller Central Tutorial: Qué es y Cómo funciona</b>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="ILr3ZemW_OY" role="button" tabindex="0" aria-label="Reproducir: Google News llega a ESPAÑA 2022: Cómo hacer SEO en Google Noticias">
+            <img src="https://i.ytimg.com/vi/ILr3ZemW_OY/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ILr3ZemW_OY/hqdefault.jpg';"
+                 alt="Google News llega a ESPAÑA 2022: Cómo hacer SEO en Google Noticias" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>Google News llega a ESPAÑA 2022: Cómo hacer SEO en Google Noticias</b>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="PERFQAulWZQ" role="button" tabindex="0" aria-label="Reproducir: SEO en Google Discover: ¿Qué es y cómo optimizar tu web?">
+            <img src="https://i.ytimg.com/vi/PERFQAulWZQ/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PERFQAulWZQ/hqdefault.jpg';"
+                 alt="SEO en Google Discover: ¿Qué es y cómo optimizar tu web?" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>SEO en Google Discover: ¿Qué es y cómo optimizar tu web?</b>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="HhC2H6dOqQE" role="button" tabindex="0" aria-label="Reproducir: Amazon FBA: Tarifas, Tamaño, Peso... — Cómo vender en Amazon">
+            <img src="https://i.ytimg.com/vi/HhC2H6dOqQE/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HhC2H6dOqQE/hqdefault.jpg';"
+                 alt="Amazon FBA: Tarifas, Tamaño, Peso... — Cómo vender en Amazon" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>Amazon FBA: Tarifas, Tamaño, Peso... — Cómo vender en Amazon</b>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="oY8-83cHvWk" role="button" tabindex="0" aria-label="Reproducir: Cómo mejorar tu página web con Google NLP">
+            <img src="https://i.ytimg.com/vi/oY8-83cHvWk/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/oY8-83cHvWk/hqdefault.jpg';"
+                 alt="Cómo mejorar tu página web con Google NLP" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>Cómo mejorar tu página web con Google NLP</b>
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="OLDFbG05acA" role="button" tabindex="0" aria-label="Reproducir: Discutiendo growth y captación online en startups — Podcast #28">
+            <img src="https://i.ytimg.com/vi/OLDFbG05acA/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OLDFbG05acA/hqdefault.jpg';"
+                 alt="Discutiendo growth y captación online en startups — Podcast #28" loading="lazy" width="480" height="270">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption">
+            <b>Discutiendo growth y captación online en startups — Podcast #28</b>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:24px; font-size:0.88rem; color:var(--ink-soft);">
+        Ver todos los vídeos en <a href="https://www.youtube.com/@TU_CANAL" style="color:var(--brass);">YouTube →</a>
+      </p>
+    </section>
+
+  </main>
 
   <footer>Barcelona, España / Espanha / Spain</footer>
+
+  <script>
+    function playYT(el){
+      const id = el.dataset.id;
+      const title = el.getAttribute('aria-label') || 'YouTube video';
+      el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id +
+        '?autoplay=1" title="' + title.replace(/"/g,'&quot;') +
+        '" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>';
+      el.classList.remove('yt-facade');
+    }
+    document.querySelectorAll('.yt-facade').forEach(function(el){
+      el.addEventListener('click', function(){ playYT(el); });
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); playYT(el); }
+      });
+    });
+  </script>
 </body>
 </html>
