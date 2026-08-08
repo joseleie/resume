@@ -1,0 +1,33 @@
+# José Leite
+
+> Chief Marketing Officer & AI Automation Architect. 15+ years scaling growth,
+> SEO/GEO and n8n automation across LogiTech, Retail, EdTech and Media.
+> Based in Barcelona, Spain.
+
+José Leite is a Senior Full-Stack Marketer and AI Automation Architect
+specialised in the convergence of Generative AI, automation (n8n), SEO and
+GEO (Generative Engine Optimization). Currently CMO at EnvioxEnvio. Previously
+Head of SEO & Organic Growth at Kleding/Fashiola, Senior Digital Consultant
+at Elabs Consulting, and International Acquisition Manager at Camaloon.
+
+Education: Computer Engineering, Universidade de Coimbra (2002).
+Postgraduate Diploma in Marketing, IPAM - The Marketing School.
+Certifications: Google Analytics 4 (GA4), HubSpot Inbound Expert,
+SAS Marketing Automation.
+
+## CV / Resume
+
+- [Español](https://joseleie.github.io/resume/es.html): Full CV in Spanish, with downloadable PDF
+- [Português](https://joseleie.github.io/resume/pt.html): Full CV in Portuguese (Portugal), with downloadable PDF
+- [English](https://joseleie.github.io/resume/en.html): Full CV in English (UK), with downloadable PDF
+
+## Videoblog
+
+- [Videoblog](https://joseleie.github.io/resume/): SEO, GEO and e-commerce video content on the homepage, embedded from YouTube
+
+## Contact
+
+- Email: j.m.leite@email.com
+- Email (social): j.m.leite.social@proton.me
+- LinkedIn: https://www.linkedin.com/in/jose-leite-seo/
+- GitHub: https://github.com/joseleie
