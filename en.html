@@ -453,6 +453,12 @@
     font-weight:600;
   }
   .langswitch a:hover:not(.current){color:var(--ink);}
+  .langswitch a.home-link{
+    font-size:14px;
+    padding:6px 9px;
+    border-right:1px solid var(--line);
+    margin-right:2px;
+  }
   @media(max-width:520px){
     .langswitch{top:auto; bottom:16px; right:16px;}
   }
@@ -513,7 +519,7 @@
 
 </head>
 <body>
-<nav class="langswitch"><a href="es.html">ES</a><a href="pt.html">PT</a><a href="en.html" class="current">EN</a></nav>
+<nav class="langswitch"><a href="index.html" class="home-link" title="Home">&#8962;</a><a href="es.html">ES</a><a href="pt.html">PT</a><a href="en.html" class="current">EN</a></nav>
 <div class="layout">
   <nav class="tabs">
     <a href="#perfil" class="tab active">PROFILE</a>
