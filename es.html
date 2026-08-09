@@ -290,32 +290,48 @@
   .job .company{color:var(--brass); font-weight:500; font-size:0.92rem; margin-bottom:8px;}
   .job p{color:var(--ink-soft); font-size:0.96rem;}
 
-  /* TIMELINE resumo visual */
+  /* TIMELINE horizontal, resumo visual */
   .timeline{
-    position:relative;
-    padding-left:56px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:22px 2px 30px;
     margin-bottom:8px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    scrollbar-color:var(--brass-soft) transparent;
   }
-  .timeline::before{
+  .timeline::-webkit-scrollbar{height:5px;}
+  .timeline::-webkit-scrollbar-thumb{background:var(--brass-soft); border-radius:3px;}
+  .tl-track{
+    display:flex;
+    gap:26px;
+    position:relative;
+    width:max-content;
+    padding-top:20px;
+  }
+  .tl-track::before{
     content:"";
     position:absolute;
-    left:19px;
-    top:6px;
-    bottom:6px;
-    width:1px;
+    top:20px;
+    left:20px;
+    right:20px;
+    height:1px;
     background:var(--line);
+    z-index:0;
   }
   .tl-item{
     position:relative;
-    padding-bottom:22px;
+    z-index:1;
+    flex:0 0 92px;
+    text-align:center;
+    text-decoration:none;
+    color:inherit;
+    display:block;
   }
-  .tl-item:last-child{padding-bottom:0;}
   .tl-logo{
-    position:absolute;
-    left:-56px;
-    top:0;
     width:40px;
     height:40px;
+    margin:0 auto;
     border-radius:50%;
     background:var(--paper-dim);
     border:1px solid var(--line);
@@ -324,7 +340,9 @@
     justify-content:center;
     overflow:hidden;
     flex-shrink:0;
+    transition:border-color 0.2s ease, transform 0.2s ease;
   }
+  .tl-item:hover .tl-logo{border-color:var(--brass); transform:translateY(-2px);}
   .tl-logo img{
     width:100%;
     height:100%;
@@ -342,14 +360,20 @@
     font-weight:600;
     color:var(--brass);
   }
-  .tl-content{padding-top:8px;}
-  .tl-content .tl-company{font-weight:600; font-size:0.94rem; color:var(--ink);}
+  .tl-content{margin-top:9px;}
+  .tl-content .tl-company{
+    font-weight:600;
+    font-size:0.74rem;
+    color:var(--ink);
+    line-height:1.25;
+  }
   .tl-content .tl-dates{
     font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
+    font-size:9.5px;
     color:var(--ink-soft);
-    margin-top:1px;
+    margin-top:3px;
   }
+  .job{scroll-margin-top:24px;}
   .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
@@ -524,109 +548,111 @@
     <section id="experiencia">
       <h2><span class="idx">01</span> Experiencia</h2>
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-track">
+        <a href="#exp-enviox-envio" class="tl-item">
           <div class="tl-logo">
             <img src="logos/enviox-envio.png" alt="EnvioxEnvio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">EE</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Chief Marketing Officer (CMO) · EnvioxEnvio</div>
+            <div class="tl-company">EnvioxEnvio</div>
             <div class="tl-dates">Marzo 2025 – Presente</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-kleding-fashiola" class="tl-item">
           <div class="tl-logo">
             <img src="logos/kleding-fashiola.png" alt="Kleding / Fashiola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">KF</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Head of SEO & Organic Growth · Kleding / Fashiola</div>
+            <div class="tl-company">Kleding / Fashiola</div>
             <div class="tl-dates">Marzo 2024 – Noviembre 2024</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-elabs-consulting" class="tl-item">
           <div class="tl-logo">
             <img src="logos/elabs-consulting.png" alt="Elabs Consulting" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">EC</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Senior Digital Consultant · Elabs Consulting</div>
+            <div class="tl-company">Elabs Consulting</div>
             <div class="tl-dates">Marzo 2020 – Febrero 2024</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-camaloon" class="tl-item">
           <div class="tl-logo">
             <img src="logos/camaloon.png" alt="Camaloon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">CM</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">International Acquisition Manager · Camaloon</div>
+            <div class="tl-company">Camaloon</div>
             <div class="tl-dates">Febrero 2017 – Febrero 2020</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-icontainers" class="tl-item">
           <div class="tl-logo">
             <img src="logos/icontainers.png" alt="iContainers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">IC</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Global Marketing Director / CMO · iContainers</div>
+            <div class="tl-company">iContainers</div>
             <div class="tl-dates">Mayo 2015 – Enero 2017</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-grupo-planeta" class="tl-item">
           <div class="tl-logo">
             <img src="logos/grupo-planeta.png" alt="Grupo Planeta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">GP</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Digital Marketing & Project Manager · Grupo Planeta</div>
+            <div class="tl-company">Grupo Planeta</div>
             <div class="tl-dates">Mayo 2014 – Noviembre 2014</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-mequedouno" class="tl-item">
           <div class="tl-logo">
             <img src="logos/mequedouno.png" alt="MeQuedoUno" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">MQ</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Head of Marketing · MeQuedoUno</div>
+            <div class="tl-company">MeQuedoUno</div>
             <div class="tl-dates">Noviembre 2011 – Septiembre 2014</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-verlag-dashofer" class="tl-item">
           <div class="tl-logo">
             <img src="logos/verlag-dashofer.png" alt="Verlag Dashöfer" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">VD</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Director de Marketing On/Off · Verlag Dashöfer</div>
+            <div class="tl-company">Verlag Dashöfer</div>
             <div class="tl-dates">2008–2010</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-auto-europe" class="tl-item">
           <div class="tl-logo">
             <img src="logos/auto-europe.png" alt="Auto Europe UK/IE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">AE</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">SEO Executive · Auto Europe UK/IE</div>
+            <div class="tl-company">Auto Europe UK/IE</div>
             <div class="tl-dates">2010–2011</div>
           </div>
-        </div>
-        <div class="tl-item">
+        </a>
+        <a href="#exp-qmusika" class="tl-item">
           <div class="tl-logo">
             <img src="logos/qmusika.png" alt="Qmusika" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">QM</span>
           </div>
           <div class="tl-content">
-            <div class="tl-company">Marketing Manager · Qmusika</div>
+            <div class="tl-company">Qmusika</div>
             <div class="tl-dates">2007–2009</div>
           </div>
+        </a>
         </div>
       </div>
 
-      <div class="job">
+      <div class="job" id="exp-enviox-envio">
         <time>Marzo 2025 – Presente</time>
         <div>
           <h3>Chief Marketing Officer (CMO)</h3>
@@ -634,7 +660,7 @@
           <p>Desde marzo de 2025, lidero la estrategia global de adquisición y digitalización de la cadena de suministro mediante marketing de alto rendimiento. Diseño flujos en n8n e IA para integrar CRM, ERP y operaciones, logrando cualificar leads en tiempo real, automatizar la comunicación a escala y reducir un 40% el tiempo operativo. Gracias a la optimización continua del embudo y del Customer Journey, impulsé un crecimiento del 300% en la base de usuarios, reduciendo al mismo tiempo el CAC y maximizando el LTV.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-kleding-fashiola">
         <time>Marzo 2024 – Noviembre 2024</time>
         <div>
           <h3>Head of SEO & Organic Growth</h3>
@@ -642,7 +668,7 @@
           <p>Dirigí la estrategia de SEO internacional a gran escala para 23 países y 12 idiomas, gestionando e-commerces con catálogos masivos de millones de SKUs. Lideré la transición hacia GEO y SGE, optimizando la visibilidad en motores generativos como Gemini, Perplexity y ChatGPT Search para aumentar la autoridad de entidad y la cuota de respuesta. Además, escalé la producción de contenido semántico con flujos automatizados bajo estándares E-E-A-T y ejecuté la optimización técnica del rendimiento en Google Merchant Center.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-elabs-consulting">
         <time>Marzo 2020 – Febrero 2024</time>
         <div>
           <h3>Senior Digital Consultant</h3>
@@ -650,7 +676,7 @@
           <p>Gestioné proyectos de SEO de alto rendimiento para clientes de media, travel, e-commerce de gran volumen (>1M de URLs), plataformas SaaS y marcas de moda (fashion), optimizando la arquitectura web, el Crawl Budget y las Core Web Vitals, además de maximizar el tráfico en Google Discover y News. Ofrecí consultoría transversal 360° integrando SEO con Paid Media (SEM/Social Ads) y automatizaciones de CRM y Email Marketing para maximizar el ROI. Asimismo, colaboré directamente con equipos de producto y desarrollo mediante metodologías Agile (Scrum/Kanban) en Jira.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-camaloon">
         <time>Febrero 2017 – Febrero 2020</time>
         <div>
           <h3>International Acquisition Manager</h3>
@@ -658,7 +684,7 @@
           <p>Lideré el equipo de adquisición administrando presupuestos de 7 cifras en Paid Media (SEM y Social) orientados a maximizar el ROAS, reducir el CPA e impulsar una alta escalabilidad en España y EE. UU. Implementé modelos de atribución y dashboards analíticos avanzados para la supervisión holística del CAC y el LTV. Además, colaboré estrechamente con el equipo de producto en la ejecución de tests A/B y la optimización de la tasa de conversión (CRO) y experiencia de usuario (UX) adaptada a cada mercado.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-icontainers">
         <time>Mayo 2015 – Enero 2017</time>
         <div>
           <h3>Global Marketing Director / CMO</h3>
@@ -666,7 +692,7 @@
           <p>Dirigí la estrategia global de marketing digital (SEM, SEO, Inbound, Social y Mobile) en España y EE. UU. para el primer cotizador de transporte marítimo del mundo, orientando cada canal a resultados mediante el diseño estratégico de campañas y la automatización de procesos B2B/B2C.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-grupo-planeta">
         <time>Mayo 2014 – Noviembre 2014</time>
         <div>
           <h3>Digital Marketing & Project Manager</h3>
@@ -674,7 +700,7 @@
           <p>Dirigí la captación y retención de usuarios para tres marcas del área de formación del grupo, así como la estrategia de rendimiento digital para sus sellos editoriales líderes. Para maximizar los resultados de ventas, coordiné la estrategia comercial integrando las campañas digitales con un call center enfocado en la conversión outbound.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-mequedouno">
         <time>Noviembre 2011 – Septiembre 2014</time>
         <div>
           <h3>Head of Marketing</h3>
@@ -682,7 +708,7 @@
           <p>Dirigí la estrategia de marketing para un e-commerce de flash sales de alta rotación y fidelización, escalando el modelo desde 1 vertical inicial hasta 8 verticales temáticos y un supermercado online. Lideré campañas masivas de Paid Media y SEO, complementadas con una sólida estrategia de Email Marketing donde gestioné la entregabilidad técnica y la segmentación avanzada para maximizar la retención y el LTV.</p>
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-verlag-dashofer">
         <time>2008–2010</time>
         <div>
           <h3>Director de Marketing On/Off</h3>
@@ -690,7 +716,7 @@
           
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-auto-europe">
         <time>2010–2011</time>
         <div>
           <h3>SEO Executive</h3>
@@ -698,7 +724,7 @@
           
         </div>
       </div>
-      <div class="job">
+      <div class="job" id="exp-qmusika">
         <time>2007–2009</time>
         <div>
           <h3>Marketing Manager</h3>
