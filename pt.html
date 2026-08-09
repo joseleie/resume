@@ -294,7 +294,7 @@
   .timeline{
     overflow-x:auto;
     overflow-y:hidden;
-    padding:22px 2px 30px;
+    padding:4px 2px 30px;
     margin-bottom:8px;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:thin;
@@ -307,12 +307,11 @@
     gap:26px;
     position:relative;
     width:max-content;
-    padding-top:20px;
   }
   .tl-track::before{
     content:"";
     position:absolute;
-    top:20px;
+    top:30px;
     left:20px;
     right:20px;
     height:1px;
@@ -326,12 +325,25 @@
     text-align:center;
     text-decoration:none;
     color:inherit;
-    display:block;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .tl-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:9px;
+    line-height:11px;
+    color:var(--ink-soft);
+    height:22px;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
   }
   .tl-logo{
     width:40px;
     height:40px;
-    margin:0 auto;
+    margin-top:13px;
     border-radius:50%;
     background:var(--paper-dim);
     border:1px solid var(--line);
@@ -360,18 +372,12 @@
     font-weight:600;
     color:var(--brass);
   }
-  .tl-content{margin-top:9px;}
-  .tl-content .tl-company{
+  .tl-company{
+    margin-top:8px;
     font-weight:600;
     font-size:0.74rem;
     color:var(--ink);
     line-height:1.25;
-  }
-  .tl-content .tl-dates{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:9.5px;
-    color:var(--ink-soft);
-    margin-top:3px;
   }
   .job{scroll-margin-top:24px;}
   .skills-grid{
@@ -556,104 +562,84 @@
       <div class="timeline">
         <div class="tl-track">
         <a href="#exp-enviox-envio" class="tl-item">
+          <div class="tl-dates">Março 2025 – Presente</div>
           <div class="tl-logo">
             <img src="logos/enviox-envio.png" alt="EnvioxEnvio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">EE</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">EnvioxEnvio</div>
-            <div class="tl-dates">Março 2025 – Presente</div>
-          </div>
+          <div class="tl-company">EnvioxEnvio</div>
         </a>
         <a href="#exp-kleding-fashiola" class="tl-item">
+          <div class="tl-dates">Março 2024 – Novembro 2024</div>
           <div class="tl-logo">
             <img src="logos/kleding-fashiola.png" alt="Kleding / Fashiola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">KF</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Kleding / Fashiola</div>
-            <div class="tl-dates">Março 2024 – Novembro 2024</div>
-          </div>
+          <div class="tl-company">Kleding / Fashiola</div>
         </a>
         <a href="#exp-elabs-consulting" class="tl-item">
+          <div class="tl-dates">Março 2020 – Fevereiro 2024</div>
           <div class="tl-logo">
             <img src="logos/elabs-consulting.png" alt="Elabs Consulting" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">EC</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Elabs Consulting</div>
-            <div class="tl-dates">Março 2020 – Fevereiro 2024</div>
-          </div>
+          <div class="tl-company">Elabs Consulting</div>
         </a>
         <a href="#exp-camaloon" class="tl-item">
+          <div class="tl-dates">Fevereiro 2017 – Fevereiro 2020</div>
           <div class="tl-logo">
             <img src="logos/camaloon.png" alt="Camaloon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">CM</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Camaloon</div>
-            <div class="tl-dates">Fevereiro 2017 – Fevereiro 2020</div>
-          </div>
+          <div class="tl-company">Camaloon</div>
         </a>
         <a href="#exp-icontainers" class="tl-item">
+          <div class="tl-dates">Maio 2015 – Janeiro 2017</div>
           <div class="tl-logo">
             <img src="logos/icontainers.png" alt="iContainers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">IC</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">iContainers</div>
-            <div class="tl-dates">Maio 2015 – Janeiro 2017</div>
-          </div>
+          <div class="tl-company">iContainers</div>
         </a>
         <a href="#exp-grupo-planeta" class="tl-item">
+          <div class="tl-dates">Maio 2014 – Novembro 2014</div>
           <div class="tl-logo">
             <img src="logos/grupo-planeta.png" alt="Grupo Planeta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">GP</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Grupo Planeta</div>
-            <div class="tl-dates">Maio 2014 – Novembro 2014</div>
-          </div>
+          <div class="tl-company">Grupo Planeta</div>
         </a>
         <a href="#exp-mequedouno" class="tl-item">
+          <div class="tl-dates">Novembro 2011 – Setembro 2014</div>
           <div class="tl-logo">
             <img src="logos/mequedouno.png" alt="MeQuedoUno" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">MQ</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">MeQuedoUno</div>
-            <div class="tl-dates">Novembro 2011 – Setembro 2014</div>
-          </div>
+          <div class="tl-company">MeQuedoUno</div>
         </a>
         <a href="#exp-verlag-dashofer" class="tl-item">
+          <div class="tl-dates">2008–2010</div>
           <div class="tl-logo">
             <img src="logos/verlag-dashofer.png" alt="Verlag Dashöfer" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">VD</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Verlag Dashöfer</div>
-            <div class="tl-dates">2008–2010</div>
-          </div>
+          <div class="tl-company">Verlag Dashöfer</div>
         </a>
         <a href="#exp-auto-europe" class="tl-item">
+          <div class="tl-dates">2010–2011</div>
           <div class="tl-logo">
             <img src="logos/auto-europe.png" alt="Auto Europe UK/IE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">AE</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Auto Europe UK/IE</div>
-            <div class="tl-dates">2010–2011</div>
-          </div>
+          <div class="tl-company">Auto Europe UK/IE</div>
         </a>
         <a href="#exp-qmusika" class="tl-item">
+          <div class="tl-dates">2007–2009</div>
           <div class="tl-logo">
             <img src="logos/qmusika.png" alt="Qmusika" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
             <span class="tl-fallback" style="display:none;">QM</span>
           </div>
-          <div class="tl-content">
-            <div class="tl-company">Qmusika</div>
-            <div class="tl-dates">2007–2009</div>
-          </div>
+          <div class="tl-company">Qmusika</div>
         </a>
         </div>
       </div>
