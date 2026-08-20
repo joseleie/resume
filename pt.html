@@ -10,6 +10,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 <meta charset="UTF-8">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Título e descrição -->
@@ -165,8 +168,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "potentialAction": {
     "@type": "DownloadAction",
     "name": "Descarregar CV em PDF",
-    "target": "https://joseleie.github.io/resume/cv-jose-leite-pt.pdf",
-    "encodingType": "application/pdf"
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://joseleie.github.io/resume/cv-jose-leite-pt.pdf",
+      "contentType": "application/pdf"
+    }
   }
 }
 </script>
