@@ -459,9 +459,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color:var(--ink-soft);
   }
 
+  .hmenu{
+    position:sticky;
+    top:0;
+    z-index:40;
+    display:flex;
+    justify-content:center;
+    gap:2px;
+    flex-wrap:wrap;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    padding:14px 6vw;
+    margin-top:36px;
+  }
+  .hmenu a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--ink-soft);
+    padding:8px 14px;
+    border:1px solid transparent;
+    transition:color 0.2s ease, border-color 0.2s ease;
+  }
+  .hmenu a:hover{color:var(--ink); border-color:var(--line);}
+
+  .back-to-top{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:28px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:var(--brass);
+  }
+  .back-to-top:hover{color:var(--ink);}
+
   @media(max-width:520px){
     header{padding-top:52px;}
     .langs a{width:220px;}
+    .hmenu{gap:0; padding:10px 4vw;}
+    .hmenu a{font-size:9.5px; padding:7px 8px;}
   }
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
@@ -475,11 +517,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-  <header>
+  <header id="top">
     <img src="foto.jpg" alt="José Leite" class="headshot" width="400" height="400" fetchpriority="high" loading="eager" decoding="async">
     <h1>JOSÉ LEITE</h1>
     <p class="tagline">Automatización IA y SEO/GEO</p>
   </header>
+
+  <nav class="hmenu">
+    <a href="#idiomas">Idiomas</a>
+    <a href="#vlog">Videoblog</a>
+    <a href="#orgullo">Orgullo</a>
+    <a href="#fuera-trabajo">Off the Clock</a>
+  </nav>
 
   <main>
 
@@ -500,6 +549,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="lang-name">English (UK)</span>
         </a>
       </nav>
+
+      <a href="#top" class="back-to-top">&#8593; Volver arriba</a>
     </section>
 
     <section id="vlog">
@@ -605,6 +656,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+
+      <a href="#top" class="back-to-top">&#8593; Volver arriba</a>
     </section>
 
     <section id="orgullo">
@@ -624,6 +677,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+
+      <a href="#top" class="back-to-top">&#8593; Volver arriba</a>
     </section>
 
     <section id="fuera-trabajo">
@@ -646,6 +701,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
       </div>
+
+      <a href="#top" class="back-to-top">&#8593; Volver arriba</a>
     </section>
 
   </main>
