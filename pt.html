@@ -488,6 +488,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .card h3{font-size:1rem; margin-bottom:6px;}
   .card p{font-size:0.9rem; color:var(--ink-soft);}
+  .faq-list{display:flex; flex-direction:column;}
+  .faq-item{
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .faq-item:first-child{border-top:none; padding-top:0;}
+  .faq-q{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:1rem;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .faq-a{
+    font-size:0.94rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
   .contact-links{display:flex; flex-direction:column; gap:10px; margin-top:20px;}
   .contact-links a{
     color:var(--ink);
@@ -623,6 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#trabalhos" class="tab">COMPETÊNCIAS</a>
     <a href="#formacion" class="tab">FORMAÇÃO</a>
     <a href="#sectores" class="tab">SETORES</a>
+    <a href="#faq" class="tab">FAQ</a>
     <a href="#contacto" class="tab">CONTACTO</a>
   </nav>
 
@@ -880,8 +899,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
+    <section id="faq">
+      <h2><span class="idx">06</span> Perguntas Frequentes</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-q">Trabalha em remoto ou em escritório?</h3>
+          <p class="faq-a">Trabalho em remoto se o projeto for fora de Barcelona, e híbrido se for em Barcelona.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">Oferece serviços freelance ou consultoria pontual?</h3>
+          <p class="faq-a">Atualmente só considero posições fixas a tempo inteiro, não projetos freelance pontuais.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">Em que idiomas pode trabalhar?</h3>
+          <p class="faq-a">Espanhol, português e inglês, com fluência profissional nos três.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">As suas certificações são verificáveis?</h3>
+          <p class="faq-a">Sim. Google Analytics 4 (GA4), HubSpot Inbound Expert e SAS Marketing Automation são certificações oficiais verificáveis nas plataformas emissoras correspondentes.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">Com que setores já trabalhou?</h3>
+          <p class="faq-a">Logistics, Travel, Retail, News & Media, Têxtil & Moda, Food & Beverage, Home Goods e Real Estate.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q">O que o diferencia de outros perfis de Growth Marketing?</h3>
+          <p class="faq-a">A combinação de growth marketing, automação com n8n e IA, e especialização específica em GEO/AEO (otimização para motores generativos como ChatGPT, Perplexity e AI Overviews).</p>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Trabalha em remoto ou em escritório?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabalho em remoto se o projeto for fora de Barcelona, e híbrido se for em Barcelona."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Oferece serviços freelance ou consultoria pontual?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atualmente só considero posições fixas a tempo inteiro, não projetos freelance pontuais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Em que idiomas pode trabalhar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Espanhol, português e inglês, com fluência profissional nos três."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "As suas certificações são verificáveis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Google Analytics 4 (GA4), HubSpot Inbound Expert e SAS Marketing Automation são certificações oficiais verificáveis nas plataformas emissoras correspondentes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Com que setores já trabalhou?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Logistics, Travel, Retail, News & Media, Têxtil & Moda, Food & Beverage, Home Goods e Real Estate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que o diferencia de outros perfis de Growth Marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A combinação de growth marketing, automação com n8n e IA, e especialização específica em GEO/AEO (otimização para motores generativos como ChatGPT, Perplexity e AI Overviews)."
+      }
+    }
+  ]
+}
+    </script>
+
     <section id="contacto">
-      <h2><span class="idx">06</span> Contacto</h2>
+      <h2><span class="idx">07</span> Contacto</h2>
       <div class="contact-links">
         <a href="mailto:j.m.leite@gmail.com">Contacto <span>&#8594;</span></a>
         <a href="mailto:j.m.leite@outlook.com">Email (redes sociais) <span>&#8594;</span></a>
