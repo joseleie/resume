@@ -250,34 +250,30 @@
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  .layout{
-    display:grid;
-    grid-template-columns:64px 1fr;
-    min-height:100vh;
-  }
   .tabs{
-    background:var(--ink);
-    display:flex;
-    flex-direction:column;
     position:sticky;
     top:0;
-    height:100vh;
+    z-index:40;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:2px;
+    background:var(--ink);
+    padding:12px 6vw;
   }
   .tab{
-    flex:1;
-    display:flex;
+    display:inline-flex;
     align-items:center;
     justify-content:center;
-    writing-mode:vertical-rl;
-    text-orientation:mixed;
     color:var(--paper-dim);
     font-family:'IBM Plex Mono', monospace;
-    font-size:9px;
-    letter-spacing:0.08em;
+    font-size:10px;
+    letter-spacing:0.06em;
     text-transform:uppercase;
     text-decoration:none;
-    border-bottom:1px solid rgba(250,248,243,0.1);
-    transition:background 0.25s ease, color 0.25s ease;
+    padding:9px 13px;
+    border:1px solid transparent;
+    transition:background 0.2s ease, color 0.2s ease;
   }
   .tab:hover, .tab.active{
     background:var(--brass);
@@ -549,8 +545,8 @@
     color:var(--ink-soft);
   }
   @media(max-width:640px){
-    .layout{grid-template-columns:44px 1fr;}
-    .tab{font-size:7.5px; letter-spacing:0.04em;}
+    .tabs{gap:0; padding:10px 4vw;}
+    .tab{font-size:9px; padding:7px 9px;}
     main{padding:0 6vw;}
     .job{grid-template-columns:1fr; gap:6px;}
   }
@@ -560,10 +556,6 @@
 </style>
 <style>
   .langswitch{
-    position:fixed;
-    top:18px;
-    right:22px;
-    z-index:50;
     display:flex;
     gap:2px;
     background:var(--paper);
@@ -572,6 +564,7 @@
     font-family:'IBM Plex Mono', monospace;
     font-size:11px;
     letter-spacing:0.05em;
+    margin-left:auto;
   }
   .langswitch a{
     color:var(--ink-soft);
@@ -592,7 +585,7 @@
     margin-right:2px;
   }
   @media(max-width:520px){
-    .langswitch{top:auto; bottom:16px; right:16px;}
+    .langswitch{margin-left:0; margin-top:6px;}
   }
   .pdf-btn{
     display:inline-flex;
@@ -656,9 +649,8 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav class="langswitch"><a href="index.html" class="home-link" title="Home">&#8962;</a><a href="es.html" class="current">ES</a><a href="pt.html">PT</a><a href="en.html">EN</a></nav>
-<div class="layout">
-  <nav class="tabs">
+<nav class="tabs">
+  <nav class="langswitch"><a href="index.html" class="home-link" title="Home">&#8962;</a><a href="es.html" class="current">ES</a><a href="pt.html">PT</a><a href="en.html">EN</a></nav>
     <a href="#perfil" class="tab active">PERFIL</a>
     <a href="#experiencia" class="tab">EXPERIENCIA</a>
     <a href="#competencias" class="tab">STACK TECNOLÓGICO</a>
@@ -669,9 +661,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#orgullo" class="tab">MOMENTOS DE ORGULLO</a>
     <a href="#fuera-trabajo" class="tab">OFF THE CLOCK</a>
     <a href="#contacto" class="tab">CONTACTO</a>
-  </nav>
+</nav>
 
-  <main>
+<main>
     <section id="perfil">
       <span class="eyebrow">Currículo — 2026</span>
       <div class="hero-top">
@@ -1160,8 +1152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-  </main>
-</div>
+</main>
 
 <script>
   // Marca o tab ativo consoante a secção visível
