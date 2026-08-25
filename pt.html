@@ -253,13 +253,16 @@
   .tabs{
     position:sticky;
     top:0;
-    z-index:40;
+    z-index:35;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:2px;
     background:var(--ink);
-    padding:12px 6vw;
+    padding:12px 6vw 12px calc(6vw + 110px);
+  }
+  @media(max-width:640px){
+    .tabs{padding-left:6vw;}
   }
   .tab{
     display:inline-flex;
@@ -555,37 +558,74 @@
   }
 </style>
 <style>
+  .side-nav{
+    position:fixed;
+    top:16px;
+    left:14px;
+    z-index:45;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
   .langswitch{
     display:flex;
+    flex-direction:column;
     gap:2px;
     background:var(--paper);
     border:1px solid var(--line);
-    padding:4px;
     font-family:'IBM Plex Mono', monospace;
     font-size:11px;
     letter-spacing:0.05em;
-    margin-left:auto;
   }
   .langswitch a{
     color:var(--ink-soft);
     text-decoration:none;
-    padding:6px 10px;
+    padding:7px 12px;
     text-transform:uppercase;
+    text-align:center;
+    border-bottom:1px solid var(--line);
   }
+  .langswitch a:last-child{border-bottom:none;}
   .langswitch a.current{
     background:var(--brass);
     color:var(--ink);
     font-weight:600;
   }
   .langswitch a:hover:not(.current){color:var(--ink);}
-  .langswitch a.home-link{
-    font-size:14px;
-    padding:6px 9px;
-    border-right:1px solid var(--line);
-    margin-right:2px;
+  .langswitch a.home-link{font-size:14px;}
+  .side-contact{
+    display:block;
+    background:var(--paper);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    text-align:center;
+    padding:9px 6px;
+    writing-mode:horizontal-tb;
+    transition:background 0.2s ease, color 0.2s ease;
   }
-  @media(max-width:520px){
-    .langswitch{margin-left:0; margin-top:6px;}
+  .side-contact:hover, .side-contact.active{
+    background:var(--brass);
+    color:var(--ink);
+    border-color:var(--brass);
+  }
+  @media(max-width:640px){
+    .side-nav{
+      position:static;
+      flex-direction:row;
+      justify-content:center;
+      align-items:stretch;
+      background:var(--ink);
+      padding:8px 4vw;
+    }
+    .langswitch{flex-direction:row;}
+    .langswitch a{border-bottom:none; border-right:1px solid var(--line);}
+    .langswitch a:last-child{border-right:none;}
+    .side-contact{width:auto;}
   }
   .pdf-btn{
     display:inline-flex;
@@ -649,8 +689,12 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav class="tabs">
+<nav class="side-nav">
   <nav class="langswitch"><a href="index.html" class="home-link" title="Home">&#8962;</a><a href="es.html">ES</a><a href="pt.html" class="current">PT</a><a href="en.html">EN</a></nav>
+  <a href="#contacto" class="side-contact">CONTACTO</a>
+</nav>
+
+<nav class="tabs">
     <a href="#perfil" class="tab active">PERFIL</a>
     <a href="#experiencia" class="tab">EXPERIÊNCIA</a>
     <a href="#competencias" class="tab">STACK TECNOLÓGICO</a>
@@ -660,7 +704,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#faq" class="tab">FAQ</a>
     <a href="#orgullo" class="tab">MOMENTOS DE ORGULHO</a>
     <a href="#fuera-trabajo" class="tab">OFF THE CLOCK</a>
-    <a href="#contacto" class="tab">CONTACTO</a>
 </nav>
 
 <main>
@@ -1155,14 +1198,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <script>
-  // Marca o tab ativo consoante a secção visível
-  const tabs = document.querySelectorAll('.tab');
+  // Marca o tab (ou o link de Contacto no menu vertical) ativo consoante a secção visível
+  const navLinks = document.querySelectorAll('.tab, .side-contact');
   const sections = document.querySelectorAll('main section[id]');
   const observer = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
-        tabs.forEach(t=>t.classList.remove('active'));
-        const active = document.querySelector(`.tab[href="#${entry.target.id}"]`);
+        navLinks.forEach(t=>t.classList.remove('active'));
+        const active = document.querySelector(`.tab[href="#${entry.target.id}"], .side-contact[href="#${entry.target.id}"]`);
         if(active) active.classList.add('active');
       }
     });
