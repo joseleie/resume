@@ -1,0 +1,43 @@
+{
+  "name": "José Leite — Growth Marketing & AI Automation Expert",
+  "short_name": "José Leite",
+  "description": "CV / Currículo / Resume de José Leite — CMO & Growth Marketer, especialista en Automatización IA y SEO/GEO.",
+  "start_url": "https://joseleie.github.io/resume/",
+  "id": "https://joseleie.github.io/resume/",
+  "scope": "https://joseleie.github.io/resume/",
+  "display": "standalone",
+  "background_color": "#FAF8F3",
+  "theme_color": "#1C1B18",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
