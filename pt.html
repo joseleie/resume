@@ -571,6 +571,25 @@
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
   }
+
+  .media-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:20px;}
+  .media-card{border:1px solid var(--line); background:var(--paper-dim); overflow:hidden;}
+  .media-thumb{aspect-ratio:16/10; position:relative; cursor:pointer; background:var(--ink);}
+  .media-thumb img{width:100%; height:100%; object-fit:cover; display:block;}
+  .play-btn{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:52px; height:52px; border-radius:50%; background:rgba(28,27,24,0.72); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:17px; padding-left:3px;
+    transition:background 0.2s ease, transform 0.2s ease;
+  }
+  .media-thumb:hover .play-btn{background:var(--brass); color:var(--ink); transform:translate(-50%,-50%) scale(1.08);}
+  .media-thumb iframe{width:100%; height:100%; border:0; display:block;}
+  .media-card .caption{padding:14px 16px; font-size:0.88rem; color:var(--ink-soft);}
+  .media-card .caption b{color:var(--ink); display:block; margin-bottom:4px; font-weight:600; font-size:0.92rem;}
+  .video-lang-note{
+    display:inline-block; margin-top:4px; font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px; color:var(--brass-text); letter-spacing:0.03em;
+  }
 </style>
 <style>
   .side-nav{
@@ -716,6 +735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#trabalhos" class="tab">COMPETÊNCIAS</a>
     <a href="#formacion" class="tab">FORMAÇÃO</a>
     <a href="#sectores" class="tab">SETORES</a>
+    <a href="#vlog" class="tab">VIDEOBLOG</a>
     <a href="#faq" class="tab">FAQ</a>
     <a href="#orgullo" class="tab">MOMENTOS DE ORGULHO</a>
     <a href="#fuera-trabajo" class="tab">OFF THE CLOCK</a>
@@ -1006,8 +1026,197 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
+    <section id="vlog">
+      <h2><span class="idx">06</span> Videoblog</h2>
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="qttpO-siE5o" role="button" tabindex="0" aria-label="Reporting do Google Discover e Google News — ENTREVISTA SEO">
+            <img src="https://i.ytimg.com/vi/qttpO-siE5o/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/qttpO-siE5o/hqdefault.jpg';"
+                 alt="Reporting do Google Discover e Google News — ENTREVISTA SEO" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>Reporting do Google Discover e Google News — ENTREVISTA SEO</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="WRnx5yCQq2M" role="button" tabindex="0" aria-label="Tutorial de Amazon Seller Central: O que é e Como funciona">
+            <img src="https://i.ytimg.com/vi/WRnx5yCQq2M/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/WRnx5yCQq2M/hqdefault.jpg';"
+                 alt="Tutorial de Amazon Seller Central: O que é e Como funciona" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>Tutorial de Amazon Seller Central: O que é e Como funciona</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="ILr3ZemW_OY" role="button" tabindex="0" aria-label="Google News chega a ESPANHA 2022: Como fazer SEO no Google Notícias">
+            <img src="https://i.ytimg.com/vi/ILr3ZemW_OY/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/ILr3ZemW_OY/hqdefault.jpg';"
+                 alt="Google News chega a ESPANHA 2022: Como fazer SEO no Google Notícias" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>Google News chega a ESPANHA 2022: Como fazer SEO no Google Notícias</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="PERFQAulWZQ" role="button" tabindex="0" aria-label="SEO no Google Discover: O que é e como otimizar o teu site?">
+            <img src="https://i.ytimg.com/vi/PERFQAulWZQ/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PERFQAulWZQ/hqdefault.jpg';"
+                 alt="SEO no Google Discover: O que é e como otimizar o teu site?" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>SEO no Google Discover: O que é e como otimizar o teu site?</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="HhC2H6dOqQE" role="button" tabindex="0" aria-label="Amazon FBA: Tarifas, Tamanho, Peso... — Como vender na Amazon">
+            <img src="https://i.ytimg.com/vi/HhC2H6dOqQE/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HhC2H6dOqQE/hqdefault.jpg';"
+                 alt="Amazon FBA: Tarifas, Tamanho, Peso... — Como vender na Amazon" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>Amazon FBA: Tarifas, Tamanho, Peso... — Como vender na Amazon</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="oY8-83cHvWk" role="button" tabindex="0" aria-label="Como melhorar o teu site com o Google NLP">
+            <img src="https://i.ytimg.com/vi/oY8-83cHvWk/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/oY8-83cHvWk/hqdefault.jpg';"
+                 alt="Como melhorar o teu site com o Google NLP" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>Como melhorar o teu site com o Google NLP</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+        <div class="media-card">
+          <div class="media-thumb yt-facade" data-id="OLDFbG05acA" role="button" tabindex="0" aria-label="A discutir growth e aquisição online em startups — Podcast #28">
+            <img src="https://i.ytimg.com/vi/OLDFbG05acA/sddefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OLDFbG05acA/hqdefault.jpg';"
+                 alt="A discutir growth e aquisição online em startups — Podcast #28" loading="lazy" width="480" height="270" referrerpolicy="no-referrer">
+            <span class="play-btn">&#9658;</span>
+          </div>
+          <div class="caption"><b>A discutir growth e aquisição online em startups — Podcast #28</b>
+            <span class="video-lang-note">(Vídeo em espanhol)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "VideoObject",
+      "name": "Reporting do Google Discover e Google News — ENTREVISTA SEO",
+      "description": "Hoje vamos ver como medir o Google News e o Google Discover no Search Console. Além disso, vamos analisar a diferença entre estas duas plataformas. Tudo isto com o nosso especialista em Google News: José Leite.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/qttpO-siE5o/maxresdefault.jpg",
+      "uploadDate": "2021-03-25T09:00:13-07:00",
+      "duration": "PT19M53S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/qttpO-siE5o",
+      "contentUrl": "https://www.youtube.com/watch?v=qttpO-siE5o",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Tutorial de Amazon Seller Central: O que é e Como funciona",
+      "description": "Neste tutorial de Amazon Seller Central, explicamos o que é e como funciona este serviço, para poderes expandir a tua estratégia de marketing digital através da plataforma da Amazon e começar a aumentar as tuas vendas.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/WRnx5yCQq2M/maxresdefault.jpg",
+      "uploadDate": "2021-12-20T08:00:20-08:00",
+      "duration": "PT15M39S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/WRnx5yCQq2M",
+      "contentUrl": "https://www.youtube.com/watch?v=WRnx5yCQq2M",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Google News chega a ESPANHA 2022: Como fazer SEO no Google Notícias",
+      "description": "Como fazer SEO no Google News? Esta é uma das perguntas mais frequentes dos nossos clientes desde que o Google News anunciou o seu regresso a Espanha em 2022.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/ILr3ZemW_OY/maxresdefault.jpg",
+      "uploadDate": "2021-12-06T08:00:07-08:00",
+      "duration": "PT18M50S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/ILr3ZemW_OY",
+      "contentUrl": "https://www.youtube.com/watch?v=ILr3ZemW_OY",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "SEO no Google Discover: O que é e como otimizar o teu site?",
+      "description": "O que é o Google Discover? Como aparecer no Google Discover? É mesmo possível otimizar o teu site para o Discover? Como melhorar o posicionamento SEO neste motor e ganhar mais visibilidade e tráfego.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/PERFQAulWZQ/maxresdefault.jpg",
+      "uploadDate": "2021-11-29T08:00:13-08:00",
+      "duration": "PT18M32S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/PERFQAulWZQ",
+      "contentUrl": "https://www.youtube.com/watch?v=PERFQAulWZQ",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Amazon FBA: Tarifas, Tamanho, Peso... — Como vender na Amazon",
+      "description": "Se estás a pensar em vender na Amazon e queres saber mais sobre o modelo Amazon FBA, aqui explicamos tudo o que precisas de saber: tarifas e preços, tamanhos e pesos dos envios.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/HhC2H6dOqQE/maxresdefault.jpg",
+      "uploadDate": "2021-11-03T15:16:46+00:00",
+      "duration": "PT15M5S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/HhC2H6dOqQE",
+      "contentUrl": "https://www.youtube.com/watch?v=HhC2H6dOqQE",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "Como melhorar o teu site com o Google NLP",
+      "description": "Hoje, na Elabs Consulting, ensinamos-te a melhorar o conteúdo do teu site com o Google NLP (Natural Language Processing). Aprende a entender e a usar o Google NLP de forma mais fácil e rápida.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/oY8-83cHvWk/maxresdefault.jpg",
+      "uploadDate": "2020-07-31T10:00:23-07:00",
+      "duration": "PT20M57S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/oY8-83cHvWk",
+      "contentUrl": "https://www.youtube.com/watch?v=oY8-83cHvWk",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "name": "A discutir growth e aquisição online em startups — Podcast #28",
+      "description": "Convidámos os responsáveis de aquisição José Leite (Camaloon), Ferran Rodríguez (Quipu) e Jordi Robert (Factorial) para falar sobre aquisição orgânica de clientes, ferramentas de análise, white hat SEO vs black hat SEO, e a importância da comunicação com a equipa de produto.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/OLDFbG05acA/maxresdefault.jpg",
+      "uploadDate": "2018-03-11T16:11:16-07:00",
+      "duration": "PT45M6S",
+      "inLanguage": "es",
+      "embedUrl": "https://www.youtube.com/embed/OLDFbG05acA",
+      "contentUrl": "https://www.youtube.com/watch?v=OLDFbG05acA",
+      "publisher": {
+        "@type": "Person",
+        "name": "José Leite"
+      }
+    }
+  ]
+}
+    </script>
+
     <section id="faq">
-      <h2><span class="idx">06</span> Perguntas Frequentes</h2>
+      <h2><span class="idx">07</span> Perguntas Frequentes</h2>
       <div class="faq-list">
         <div class="faq-item">
           <h3 class="faq-q">Trabalha em remoto ou em escritório?</h3>
@@ -1168,7 +1377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 
     <section id="orgullo">
-      <h2><span class="idx">07</span> Momentos de Orgulho</h2>
+      <h2><span class="idx">08</span> Momentos de Orgulho</h2>
       <div class="grid-cards">
         <div class="media-card" style="text-align:center; padding:24px 18px;">
           <div style="font-size:1.8rem; margin-bottom:10px;">🏊</div>
@@ -1184,7 +1393,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section id="fuera-trabajo">
-      <h2><span class="idx">08</span> Fora do Trabalho</h2>
+      <h2><span class="idx">09</span> Fora do Trabalho</h2>
       <div class="grid-cards">
         <div class="media-card" style="text-align:center; padding:24px 18px;">
           <div style="font-size:1.8rem; margin-bottom:10px;">⚽</div>
@@ -1202,7 +1411,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section id="contacto">
-      <h2><span class="idx">09</span> Contacto</h2>
+      <h2><span class="idx">10</span> Contacto</h2>
       <div class="contact-links">
         <a href="mailto:j.m.leite@gmail.com">Contacto <span>&#8594;</span></a>
         <a href="mailto:j.m.leite@outlook.com">Email (redes sociais) <span>&#8594;</span></a>
@@ -1229,5 +1438,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   sections.forEach(s=>observer.observe(s));
 </script>
 
+
+<script>
+  function playYT(el){
+    const id = el.dataset.id;
+    const title = el.getAttribute('aria-label') || 'YouTube video';
+    el.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id +
+      '?autoplay=1" title="' + title.replace(/"/g,'&quot;') +
+      '" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>';
+    el.classList.remove('yt-facade');
+  }
+  document.querySelectorAll('.yt-facade').forEach(function(el){
+    el.addEventListener('click', function(){ playYT(el); });
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); playYT(el); }
+    });
+  });
+</script>
 </body>
 </html>
